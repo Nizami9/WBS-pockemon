@@ -7,9 +7,7 @@ export default function CardFight({
   data,
   player,
   onClickAttack,
-  opponent,
-  onClickSpecialAttack,
-  onClickHealth,
+  opponent
 }) {
   return (
     <Card className="poke shadow align-self-stretch">
@@ -37,8 +35,7 @@ export default function CardFight({
           {data.stats.map((stat, index) => (
             <div
               key={index}
-              className="d-flex justify-content-around align-items-center poke-list-item"
-            >
+              className="d-flex justify-content-around align-items-center poke-list-item">
               <div className="text-left w-50">
                 {stat.stat.name.charAt(0).toUpperCase() +
                   stat.stat.name.slice(1)}

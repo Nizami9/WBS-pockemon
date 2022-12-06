@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import {
   attack,
-  specialAttack,
-  health,
-  checkVictory,
+  checkVictory
 } from '../../utils/attacksType';
 import './fights.css';
 import CardFight from './CardFight';
@@ -62,7 +60,7 @@ export default function Fights() {
 
   useEffect(() => {
     setLoader(true);
-    const luckyNum = Math.floor(Math.random() * 800);
+    const luckyNum = Math.floor(Math.random() * 1100);
     fetch(`https://pokeapi.co/api/v2/pokemon/${luckyNum}`)
       .then((res) => res.json())
       .then((data) => {
@@ -99,36 +97,6 @@ export default function Fights() {
     }));
   };
 
-  const handleClickSpecialAttack = () => {
-    setLucky((prevState) => ({
-      ...prevState,
-      player: {
-        ...prevState.player,
-        hp: specialAttack(pokemon, prevState),
-      },
-    }));
-    // Attack from opponent
-    setPokemon((prevState) => ({
-      ...prevState,
-      player: {
-        ...prevState.player,
-        hp: specialAttack(lucky, prevState),
-      },
-    }));
-  };
-
-  const handleClickHealth = () => {
-    setPokemon((prevState) => ({
-      ...prevState,
-      player: {
-        ...prevState.player,
-        hp:
-          health(prevState, prevState.data.stats[0].base_stat) -
-          attack(lucky, prevState),
-      },
-    }));
-  };
-
   const handleClickWon = () => {
     history.push('/');
   };
@@ -143,8 +111,6 @@ export default function Fights() {
           <CardFight
             {...pokemon}
             onClickAttack={handleClickAttack}
-            onClickSpecialAttack={handleClickSpecialAttack}
-            onClickHealth={handleClickHealth}
           />
         )}
         {pokemon && lucky && <CardFight {...lucky} opponent />}
