@@ -33,3 +33,4 @@ PokeFight is a pokemon library and has an easy and fun fighting simulation.
 ## License
 
 `wbs-pokefight-app` is MIT licensed.
+# WBS-PockeFight
