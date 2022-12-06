@@ -50,25 +50,6 @@ const SingleCard = () => {
           </Card.Body>
           <Card.Body className="d-lg-flex justify-content-lg-around align-items-lg-start flex-lg-row-reverse">
             <ListGroup as="ul" className="poke-info-list">
-              <ListGroupItem
-                as="li"
-                className="poke-info-list-title poke-info-list-item"
-              >
-                Abilities
-              </ListGroupItem>
-              {pokemon.abilities.map((ability) => (
-                <ListGroupItem key={ability.slot}>
-                  {ability.ability.name}
-                </ListGroupItem>
-              ))}
-            </ListGroup>
-            <ListGroup as="ul" className="poke-info-list">
-              <ListGroupItem
-                as="li"
-                className="poke-info-list-title poke-info-list-item"
-              >
-                Stats
-              </ListGroupItem>
               {pokemon.stats.map((stat, index) => (
                 <ListGroupItem
                   as="li"

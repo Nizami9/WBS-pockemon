@@ -1,11 +1,12 @@
 :root {
-  --primary-color: #ff0000;
-  --secondary-color: #3b4cca;
+  --primary-color: #0000ff;
+  --secondary-color: #ca503b;
   --light-color: #f2f2f2;
   --dark-color: #0d0d0d;
   --yellow-color: #ffde00;
-  --font-body: 'Roboto', sans-serif;
-  --font-header: 'DotGothic16', sans-serif;
+  --font-body: 'ARCADECLASSIC', sans-serif;
+  --font-header: 'Pokemon', sans-serif;
+  background-image: url(./Images/game.jpg);
 }
 
 body {
@@ -13,6 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
+  background-image: url(./Images/game.jpg);
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -27,4 +29,16 @@ body {
   body {
     font-size: 20px;
   }
+}
+
+@font-face {
+  font-family: "Pokemon";   /*Can be any text*/
+  src: local("Pokemon"),
+    url("./Fonts/PokemonSolid.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ARCADECLASSIC";   /*Can be any text*/
+  src: local("ARCADECLASSIC"),
+    url("./Fonts/ARCADECLASSIC.TTF") format("truetype");
 }

@@ -28,11 +28,11 @@ export default function Cards({ name, url }) {
           </Card.Body>
           <Card.Body>
             <Link to={`/pokemon/${pokemon.id}`}>
-              <Button className="button">More Info</Button>
+              <Button className="button">All Information</Button>
             </Link>
             <br></br>
             <Link to={`/pokemon/fights/${name}`}>
-              <Button className="button">Let's Fight</Button>
+              <Button className="button">Random Fight</Button>
             </Link>
           </Card.Body>
         </Card>

@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 import './Header.css';
 import Searchbar from '../Searchbar/Searchbar';
 
@@ -9,9 +7,9 @@ const Header = () => {
     <header className="header shadow-lg">
       <div className="d-flex justify-content-around align-items-center">
         <div className="d-flex justify-content-center align-items-center">
-          <FontAwesomeIcon icon={faDotCircle} className="header-icon shadow" />
+          <div className="headerLogo"></div>
           <Link to="/" exact>
-            <h1 className="header-title d-none d-md-block">PokeFight</h1>
+            <h1 className="header-title d-none d-md-block">Welcome to PokeFight</h1>
           </Link>
         </div>
         <Searchbar />

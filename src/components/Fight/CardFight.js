@@ -31,12 +31,6 @@ export default function CardFight({
             <Button className="poke-button" onClick={onClickAttack}>
               Attack
             </Button>
-            <Button className="poke-button" onClick={onClickSpecialAttack}>
-              Special Attack
-            </Button>
-            <Button className="poke-button" onClick={onClickHealth}>
-              Health
-            </Button>
           </div>
         )}
         <div>

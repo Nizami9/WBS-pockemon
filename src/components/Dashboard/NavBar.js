@@ -10,10 +10,10 @@ export default function NavBar() {
     <Nav variant="pills" className="bar">
       <ButtonGroup>
         <Link to="/dashboard">
-          <Button className="item">Ranking</Button>
+          {/* <Button className="item">Ranking</Button> */}
         </Link>
         <Link to="/">
-          <Button className="item">Profile</Button>
+          {/* <Button className="item">Profile</Button> */}
         </Link>
       </ButtonGroup>
     </Nav>
