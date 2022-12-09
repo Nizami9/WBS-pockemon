@@ -12,19 +12,6 @@ export const attack = (attacker, defender) => {
   }
 };
 
-export const specialAttack = (attacker, defender) => {
-  const attack =
-    attacker.player.specialAttack +
-    Math.floor(Math.random() * attacker.player.specialAttack) -
-    defender.player.specialDefense;
-  const realAttack = attack <= 0 ? 20 : attack;
-  const damage = defender.player.hp - realAttack;
-  if (damage <= 0) {
-    return 0;
-  } else {
-    return damage;
-  }
-};
 
 export const health = (attacker, max) => {
   if (attacker.player.hp <= 0) {

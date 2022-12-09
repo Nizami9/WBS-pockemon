@@ -1,5 +1,5 @@
 import './Won.css';
-
+import SingleCard from '../SingleCard/SingleCard'
 export default function Won({ onClickWon, winner }) {
   let dx = {
     y: 100,
@@ -18,9 +18,10 @@ export default function Won({ onClickWon, winner }) {
 
   return (
     <div
-      className="pokemon pokemon-won d-flex justify-content-center align-items-center"
+      className="pokemon card-won pokemon-won d-flex justify-content-center align-items-center"
       onClick={onClickWon}
     >
+      <SingleCard className='wonCard' />
       <h2 className="pokemon-title pokemon-won-title">{winner} WON!!</h2>
     </div>
   );
