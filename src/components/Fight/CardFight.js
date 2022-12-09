@@ -1,7 +1,7 @@
 import './fights.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-
+import ProgressBar from '../../'
 export default function CardFight({
   data,
   player,
@@ -15,13 +15,13 @@ export default function CardFight({
         src={data.sprites.other.dream_world.front_default}
         className="poke-image mb-3"
       />
-      {/* <ProgressBar
+      {/* {<ProgressBar
         now={player.hp}
         max={data.stats[0].base_stat}
         variant="success"
         label={`${data.name}`}
         className="poke-progress"
-      /> */}
+      />} */}
       <Card.Body>
         {!opponent && (
           <div className="d-flex justify-content-around align-items-center py-4">
